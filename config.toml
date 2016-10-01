@@ -1,0 +1,7 @@
+theme = "default"
+baseurl = "https://pierreleblond.github.io/AroundTheWorld/"
+languageCode = "en-us"
+title = "Around the world"
+[Params]
+    Author = "Pierre Lespingal"
+    disqusShortname = "Pierre"

@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+<section>
+
+    <h1> Posts </h1>
+
+    {{- range first 10 .Data.Pages }}
+    {{ .Render "li" }}
+    {{- end }}
+
+</section>
+
+{{ partial "footer.html" . }}
