@@ -2,7 +2,7 @@
 
 <section>
 
-  <h1>{{ .Title }}</h1>
+  <h1 class="light-switch" >{{ .Title }}</h1>
 
   <article>
 
@@ -12,9 +12,11 @@
 
   </article>
 
-  {{ partial "disqus.html" . }}
-
 </section>
+
+<aside>
+  {{ partial "disqus.html" . }}
+</aside>
 
 {{ partial "footer.html" . }}
 

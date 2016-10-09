@@ -10,7 +10,8 @@ you'll need. So I bought it first, just to see.
 I choose a 50L model, small enought to prevent me of putting too much stuff in
 it.
 
-![Test](/static/images/undertitle.png)
+{{< figure src="/AroundTheWorld/images/earth.svg" title="Test" >}}
+<!--![Test](/AroundTheWorld/images/polaroid.svg "Test")-->
 
 Here's what I will be carrying along :
 

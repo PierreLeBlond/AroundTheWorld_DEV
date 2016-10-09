@@ -1,7 +1,8 @@
 theme = "default"
-baseurl = "https://pierreleblond.github.io/AroundTheWorld/"
+baseurl = "https://www.somewhereonearth.xyz"
 languageCode = "en-us"
-title = "Around the world"
+title = "Somewhere on Earth"
 [Params]
     Author = "Pierre Lespingal"
     disqusShortname = "Pierre"
+
