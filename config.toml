@@ -1,8 +1,7 @@
-theme = "default"
+theme = "sloth"
 baseurl = "https://www.somewhereonearth.xyz"
 languageCode = "en-us"
 title = "Somewhere on Earth"
 [Params]
     Author = "Pierre Lespingal"
     disqusShortname = "Pierre"
-

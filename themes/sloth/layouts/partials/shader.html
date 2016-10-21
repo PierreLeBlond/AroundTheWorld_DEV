@@ -1,0 +1,70 @@
+<script type="x-shader/x-vertex" id="vertexShader">
+
+varying vec2 uv_out;
+
+void main(){
+uv_out = uv;
+gl_Position = projectionMatrix*modelViewMatrix*vec4(position, 1.0);
+}
+
+</script>
+
+<script type="x-shader/x-vertex" id="vertexShaderHeightMapping">
+
+uniform sampler2D heightmap;
+
+varying vec2 uv_out;
+
+void main(){
+vec4 height = texture2D(heightmap, uv + vec2(0.027, -0.006));
+uv_out = uv;
+vec3 newPosition = (1.0 + height.x*0.1) * position;
+vec4 pos = projectionMatrix*modelViewMatrix*vec4(newPosition, 1.0);
+gl_Position = pos;
+}
+
+</script>
+
+<script type="x-shader/x-fragment" id="fragmentShader">
+
+uniform sampler2D map;
+uniform sampler2D secondmap;
+uniform sampler2D indexmap;
+uniform int pickedindex;
+uniform int lookindex;
+
+uniform float uoffset;
+uniform float voffset;
+
+varying vec2 uv_out;
+
+void main(){
+vec2 uv_new = uv_out + vec2(uoffset, voffset);
+vec4 color = texture2D(map, uv_out);
+vec4 colorIndex = texture2D(indexmap, uv_new);
+
+if(int(colorIndex.x*255.0) == pickedindex)
+gl_FragColor = mix(color, vec4(0.36, 1.0, 0.3, 1.0), 0.5);
+else if(int(colorIndex.x*255.0) == lookindex)
+gl_FragColor = mix(color, vec4(1.0, 1.0, 1.0, 1.0), 0.5);
+else
+gl_FragColor = color;
+}
+
+</script>
+
+<script type="x-shader/x-fragment" id="fragmentShaderDetector">
+
+uniform float uoffset;
+uniform float voffset;
+uniform sampler2D map;
+
+varying vec2 uv_out;
+
+void main(){
+vec2 uv_new = uv_out + vec2(uoffset, voffset);
+vec4 color = texture2D(map, uv_new);
+gl_FragColor = color;
+}
+
+</script>

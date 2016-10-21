@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+<section country="{{ .Params.country }}">
+
+  <h1 id="title" class="light-switch">{{ .Title }}</h1>
+
+  <div id="main">
+
+    <article>
+
+      <div class="post">
+        <h6>{{ .Date.Format "Mon, Jan 2, 2016" }}</h6>
+        {{ .Content }}
+      </div>
+
+    </article>
+
+    <aside>
+      {{ partial "disqus.html" . }}
+    </aside>
+
+  </div>
+
+  {{ partial "earth.html" . }}
+
+</section>
+
+{{ partial "footer.html" . }}
+

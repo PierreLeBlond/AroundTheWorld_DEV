@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+<section country="none">
+
+  <h1 id="title" class="light-switch"> Gallery </h1>
+
+  <div id="main">
+    {{- range first 10 .Data.Pages }}
+    {{ .Render "li" }}
+    {{- end }}
+  </div>
+
+  {{ partial "earth.html" . }}
+
+</section>
+
+{{ partial "footer.html" . }}

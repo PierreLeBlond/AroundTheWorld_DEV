@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+
+<section country="{{ .Params.country }}">
+
+  <h1 id="title" class="light-switch" ></h1>
+
+  <div id="main">
+
+    <article>
+
+      <div class="gallery-content">
+        {{ .Content }}
+      </div>
+
+    </article>
+
+  </div>
+
+  {{ partial "earth.html" . }}
+
+</section>
+
+<script src="/js/bower_components/cloudinary-core/cloudinary-core-shrinkwrap.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+{{ partial "footer.html" . }}
+

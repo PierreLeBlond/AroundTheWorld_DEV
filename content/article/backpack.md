@@ -1,28 +1,27 @@
 +++
 date = "2016-09-25T18:48:16+02:00"
 title = "Backpack"
-
 +++
 
-Apparently, the backpack has to be bought lastly, after all the other stuff
-you'll need. So I bought it first, just to see.
-
-I choose a 50L model, small enought to prevent me of putting too much stuff in
-it.
-
-{{< figure src="/AroundTheWorld/images/earth.svg" title="Test" >}}
-<!--![Test](/AroundTheWorld/images/polaroid.svg "Test")-->
+{{< figure src="/images/article/stuff.jpg" title="My stuff" >}}
 
 Here's what I will be carrying along :
 
-### Clothes
-
-* A short
-* A jean
-* A hybrid short/trouser, quite cool
-* A short sleeves T-shirt
-* Two long sleeves T-shirt
+* A short, a jean and their devil child, a hybrid short/jean.
+* Three T-shirt
 * Five underpants
 * Five socks
-* [...]
+* A coat and a sweater
+* Walking shoe and street shoe
+* Sunglasses
+* Swimsuit
+* Towel
+* Silk bag (To sleep)
+* Gourd
+* Toilet kit
+* Secret pocket, to put money and ID
+* Sketch book
+* Knife
+* Small laptop
 
+{{< figure src="/images/article/backpack.jpg" title="It all goes in here." >}}
