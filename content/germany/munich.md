@@ -1,5 +1,5 @@
 +++
-date = "2016-08-28T19:27:41+02:00"
+date = "2016-10-21T19:27:41+02:00"
 title = "Munich"
 image = "munich.jpg"
 type = "post"
@@ -8,7 +8,9 @@ type = "post"
 Halo !
 
 Here are my first days on the road.  
-I spent three nights in Munich, the first two one as a **couch surfer**.  
+I expect nothing, and I think I didn't quite realize yet what I'm getting into.
+
+I spent my first three nights in Munich, the first two one as a **couch surfer**.  
 And that's what I want to talk about, because yeah, there is nothing much to
 say about sightseeing, and if you want to know which buildings you can find in
 Munich, just look at the photos.
@@ -24,9 +26,9 @@ The concept surely existed way before couch was invented, but with modernity,
 the web platform [Couchsurfing](https://www.couchsurfing.com/) has become
 widely used by travelers.  
 
-That's how I ended up at Johannes, a German guy living in a small town near
+That's how I ended up at Johannes's, a German guy living in a small town near
 Munich.  
-And it turns out that he was actually hosting six people this night, as many
+And it turns out that he was actually hosting six people that night, as many
 as his small room could contain.  
 So, in the small room of ours there was :
 

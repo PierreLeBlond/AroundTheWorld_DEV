@@ -39,4 +39,4 @@ Maybe nothing, maybe stories and photos.
 
 ### Can I click on the top earth logo ?
 
-Yes.
+Yes. ( Work in progress )
