@@ -1,6 +1,13 @@
 <div id="earth-section">
   <div id="earth-div">
   </div>
+
+  <div id="country-popup">
+    <img alt="bubble" src="/images/earth/bubble.png"/>
+    <div id="text-wrap">
+      <h2 class="script-font" id="country-popup-name"></h2>
+    </div>
+  </div>
 </div>
 
 {{ partial "shader.html" . }}
@@ -14,5 +21,7 @@
 <script src="{{ $.Site.BaseURL }}/js/earth/detector.js"></script>
 <script src="{{ $.Site.BaseURL }}/js/earth/viewer.js"></script>
 <script src="{{ $.Site.BaseURL }}/js/earth/earth.js"></script>
+<script src="{{ $.Site.BaseURL }}/js/earth/path.js"></script>
+<script src="{{ $.Site.BaseURL }}/js/earth/skybox.js"></script>
 <script src="{{ $.Site.BaseURL }}/js/earth/app.js"></script>
 

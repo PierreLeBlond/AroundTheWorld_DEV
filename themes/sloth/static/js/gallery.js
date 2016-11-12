@@ -5,6 +5,7 @@ GALLERY.Image = function(){
     this.link = document.createElement("a");
     this.img = document.createElement("img");
     this.figcaption = document.createElement("figcaption");
+    this.date = null;
 }
 
 GALLERY.Image.prototype.build = function(){
@@ -23,7 +24,7 @@ GALLERY.Image.prototype.build = function(){
 GALLERY.Image.prototype.setData = function(data){
 
     var link = "http://res.cloudinary.com/somewhereonearth/image/upload/a_exif/" +
-	"v" + data.version + "/" + data.public_id + "." + data.format;
+        "v" + data.version + "/" + data.public_id + "." + data.format;
 
     this.link.href = link;
     this.link.setAttribute("data-size", data.width + "x" + data.height);
@@ -32,10 +33,12 @@ GALLERY.Image.prototype.setData = function(data){
 
     if(data.context)
     {
-	this.img.alt = data.context.custom.alt;
+        this.img.alt = data.context.custom.alt;
 
-	this.figcaption.innerHTML += data.context.custom.caption;
+        this.figcaption.innerHTML += data.context.custom.caption;
     }
+
+    this.date = data.public_id;
 };
 
 // Using the config function
@@ -50,8 +53,8 @@ GALLERY.fetchPhotos = function(callback){
 
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
-	if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-	    callback(JSON.parse(xmlHttp.responseText));
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(JSON.parse(xmlHttp.responseText));
     }
     xmlHttp.open("GET", url, true); // true for asynchronous
     xmlHttp.send(null);
@@ -59,13 +62,22 @@ GALLERY.fetchPhotos = function(callback){
 
 GALLERY.buildGallery = function(data){
     console.log(data);
+    var imageArray = [];
     data.resources.forEach(function(photo)
-    {
-	var image = new GALLERY.Image();
-	image.build();
-	image.setData(photo);
-	document.getElementById("gallery-holder").appendChild(image.figure);
+                           {
+                               var image = new GALLERY.Image();
+                               image.build();
+                               image.setData(photo);
+                               imageArray.push(image);
+                           });
+    imageArray.sort(function(x, y){
+        return x.date.localeCompare(y.date);
     });
+
+    imageArray.forEach(function(image)
+                       {
+                           document.getElementById("gallery-holder").appendChild(image.figure);
+                       });
 }
 
 GALLERY.fetchPhotos(GALLERY.buildGallery);

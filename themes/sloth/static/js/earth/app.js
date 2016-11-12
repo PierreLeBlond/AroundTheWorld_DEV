@@ -17,6 +17,8 @@ EARTH.App = function(){
     this.isReady                            = false;
     this.viewer                             = null;
     this.earth                              = null;
+    this.path                               = null;
+    this.skybox                             = null;
     this.windowResizeEvent                  = null;
 
     this.lat                                = 0;
@@ -33,14 +35,12 @@ EARTH.App.prototype.setDomElement = function(el){
 };
 
 EARTH.App.prototype.focus = function(lat, lon){
-    lat -= 90;
-    lat -= 5;
-    lat *= Math.PI/180.0;
-    lon += 180;
-    lon += 5;
-    lon *= Math.PI/180.0;
+    var phi = Math.PI/2 - lat * Math.PI / 180 - Math.PI * 0.01;
+    var theta = 2 * Math.PI - lon * Math.PI / 180 + Math.PI * 0.06;
 
-    this.viewer.scene.camera.position.set(2*Math.cos(lon)*Math.sin(lat), 2*Math.cos(lat), 2*Math.sin(lon)*Math.sin(lat));
+    var r = 2;
+
+    this.viewer.scene.camera.position.set(r*Math.cos(theta)*Math.sin(phi), r*Math.cos(phi), r*Math.sin(theta)*Math.sin(phi));
     this.viewer.scene.camera.lookAt(new THREE.Vector3(0, 0, 0));
 };
 
@@ -64,7 +64,19 @@ EARTH.App.prototype.setupApp = function(){
     this.earth.setupEarth();
 
     this.viewer.scene.scene.add( this.earth.earthObject );
+    this.viewer.scene.scene.add( this.earth.hollowObject );
     this.viewer.earth = this.earth;
+
+    this.path = new EARTH.Path;
+    this.path.setup();
+
+    this.viewer.scene.scene.add( this.path.pointCloud );
+
+    this.skybox = new EARTH.Skybox;
+    this.skybox.setup();
+    this.viewer.scene.scene.add( this.skybox.skyObject );
+
+    this.viewer.scene.scene.add( this.viewer.scene.camera );
 
     var country = document.getElementsByTagName("section")[0].getAttribute("country");
     if(!country || country == "none")
@@ -100,54 +112,38 @@ EARTH.App.prototype.toogleEarth = function(){
     }
 
     if(this.light){
+        var elements = document.getElementsByClassName("switch");
+        for(var i = 0; i < elements.length; i++)
+        {
+            elements[i].className = elements[i].className.replace("day","night");
+        }
+
         document.getElementById("main").style.display = "none";
         document.getElementById("title").style.display = "none";
         document.getElementById("earth-section").style.display = "block";
         document.getElementById("main-nav").style.display = "none";
         document.getElementById("earth-nav").style.display = "block";
 
-        var divs = document.getElementsByClassName("light-switch");
-        for(var i = 0; i < divs.length; i++)
-        {
-            divs[i].style.color = "#EEEEEE";
-        }
-
-        var imgs = document.getElementsByClassName("underline");
-        for(var i = 0; i < imgs.length; i++)
-        {
-            imgs[i].src = "/images/undertitle.svg";
-        }
-
         document.getElementById("earth-logo").src = "/images/earth_neg.svg";
-        document.getElementById("header").className = "night";
 
-        document.getElementsByTagName("body")[0].style.backgroundColor = "#030303";
         this.viewer.resize();
         this.viewer.render();
     }
     else{
+        var elements = document.getElementsByClassName("switch");
+        for(var i = 0; i < elements.length; i++)
+        {
+            elements[i].className = elements[i].className.replace("night","day");
+        }
+
         document.getElementById("earth-section").style.display = "none";
         document.getElementById("main").style.display = "block";
         document.getElementById("title").style.display = "block";
         document.getElementById("earth-nav").style.display = "none";
         document.getElementById("main-nav").style.display = "block";
 
-        var divs = document.getElementsByClassName("light-switch");
-        for(var i = 0; i < divs.length; i++)
-        {
-            divs[i].style.color = "#030303";
-        }
-
         document.getElementById("earth-logo").src = "/images/earth.svg";
-        document.getElementById("header").className = "day";
 
-        var imgs = document.getElementsByClassName("underline");
-        for(var i = 0; i < imgs.length; i++)
-        {
-            imgs[i].src = "/images/undertitle_neg.svg";
-        }
-
-        document.getElementsByTagName("body")[0].style.backgroundColor = "#EEEEEE";
         this.viewer.stop();
     }
     this.light = !this.light;

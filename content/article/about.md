@@ -11,7 +11,7 @@ Hi !
 
 ### Who are you ?
 
-Pierre, 23 years old, French, just got my master degree.
+Pierre, 23 years old, French.
 
 ### And why interviewing yourself, which is kind of odd ?
 
@@ -20,11 +20,17 @@ world-ish.
 
 ### Oh, travel, I love travel. Tell me more.
 
-Hum, I've finished my studies, I've saved some money, I've got time.
-Plus, I don't know quite yet what I want to spend my life on, so taking a one
-year break suit me.
-Add to that all the reasons one should travel that have already been said a
-thousand time.
+There a thousand reasons one should travel that have already been told by all
+backpackers around the world, so we'll get directly to my own reasons.  
+I've just finished my studies, everything went fine so far, I don't have to
+struggle much to find a job, and society is ready to welcome me.  
+But, well, I'm not ready, or should I say I don't want to be part of something
+I still don't understand.  
+I thing I'm too afraid of being stuck in a routine, in a scheme most people
+follow, even if I find a great job and I keep a open mind.  
+More than a run away, travelling seems to be the way of knowing more about how
+people behave and interact with each others, outside the structure I've been into since my
+childhood.  
 
 ### Where then ?
 

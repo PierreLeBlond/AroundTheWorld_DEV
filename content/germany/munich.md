@@ -8,7 +8,8 @@ type = "post"
 Halo !
 
 Here are my first days on the road.  
-I expect nothing, and I think I didn't quite realize yet what I'm getting into.
+Currently, I think I didn't quite realize yet what I'm getting into. I'm just
+making the first step and see what happen.
 
 I spent my first three nights in Munich, the first two one as a **couch surfer**.  
 And that's what I want to talk about, because yeah, there is nothing much to

@@ -2,7 +2,7 @@
 
 <section country="{{ if .IsNode }}{{ .URL }}{{ else }}none{{ end }}">
 
-  <h1 class="light-switch script-font"> {{ .Title }} </h1>
+  <h1 id="title" class="script-font"> {{ .Title }} </h1>
 
   <div id="main">
     {{- range first 10 .Data.Pages }}

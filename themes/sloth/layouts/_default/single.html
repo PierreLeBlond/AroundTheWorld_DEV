@@ -2,14 +2,14 @@
 
 <section country="{{ .Section }}">
 
-  <h1 id="title" class="light-switch script-font" >{{ .Title }}</h1>
+  <h1 id="title" class="script-font" >{{ .Title }}</h1>
 
     <div id="main">
 
       <article>
 
       <h4>
-        {{ .Date.Format "2006, 1 of January" }}
+        {{ .Date.Format "2006-01-02" }}
       </h4>
 
         {{ .Content }}

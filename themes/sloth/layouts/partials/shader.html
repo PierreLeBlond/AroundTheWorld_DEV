@@ -19,7 +19,7 @@ void main(){
 vec4 height = texture2D(heightmap, uv + vec2(0.027, -0.006));
 uv_out = uv;
 vec3 newPosition = (1.0 + height.x*0.1) * position;
-vec4 pos = projectionMatrix*modelViewMatrix*vec4(newPosition, 1.0);
+vec4 pos = projectionMatrix*modelViewMatrix*vec4(position, 1.0);
 gl_Position = pos;
 }
 
@@ -68,3 +68,28 @@ gl_FragColor = color;
 }
 
 </script>
+
+<script type="x-shader/x-vertex" id="skyboxVertexShader">
+
+varying vec3 uv_out;
+
+void main(){
+uv_out = position;
+gl_Position = projectionMatrix*modelViewMatrix*vec4(position, 1.0);
+}
+
+</script>
+
+<script type="x-shader/x-fragment" id="skyboxFragmentShader">
+
+uniform samplerCube envMap;
+
+varying vec3 uv_out;
+
+void main(){
+vec4 color = textureCube(map, uv_out);
+gl_FragColor = color;
+}
+
+</script>
+
