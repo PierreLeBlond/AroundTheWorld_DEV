@@ -1,35 +1,27 @@
 #earth-logo:hover {
-    cursor: url("/images/earth.png"), pointer;
+    cursor: pointer;
 }
 
 #earth-nav {
     display: none;
-    bottom: 0px;
 }
 
 #earth-nav .nav-link {
     width: 40%;
 }
 
-#earth-nav svg {
-    height: 100%;
-    width: 100%;
-    position: absolute;
+#earth-nav.night {
     display: block;
-}
-
-#earth-nav h1 {
-    /*position: relative;
-    bottom: -50px;*/
-    text-align: center;
-    color: white;
-    font-size: 1rem;
 }
 
 #earth-section {
-    display: block;
+    display: none;
     height: 0;
     padding: 0;
+}
+
+#earth-section.night {
+    display: block;
 }
 
 #earth-div {
@@ -46,8 +38,10 @@
     margin:0;
 }
 
-#country-name.night {
+#country-name {
+    display: block;
     font-size: 1em;
+    height: 1.2rem;
     color: #FFFFFF;
     text-align: center;
     margin: 0;
@@ -60,7 +54,12 @@
     font-size: 0.6rem;
     text-align: center;
     width: 150px;
-    z-index: 2;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+#nav-switch:hover #country-popup {
+    display: none;
 }
 
 #country-popup img {
@@ -79,12 +78,9 @@
 }
 
 @media screen and (min-device-width: 0px) and (max-device-width: 550px) {
-    #earth-nav .nav-link {
-        width: 49%;
-    }
 
     #country-name.night {
-        font-size: 2em;
+        font-size: 1em;
     }
 
     .countryPopup {
@@ -92,5 +88,16 @@
         padding: 0.2rem;
         border: solid 6px white;
         border-radius: 6px;
+    }
+
+    #earth-nav {
+        top: 7.2rem;
+        background-color: #000000;
+    }
+}
+
+@media screen and (min-device-width: 0px) and (max-device-width: 280px) {
+    #earth-nav .nav-link {
+        width: 100%;
     }
 }

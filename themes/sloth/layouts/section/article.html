@@ -2,9 +2,9 @@
 
 <section country="none">
 
-  <h1 id="title" class="script-font"> Articles </h1>
+  <h1 id="title" class="script-font switch day"> Articles </h1>
 
-  <div id="main">
+  <div id="main" class="switch day">
     {{- range first 10 .Data.Pages }}
     {{ .Render "li" }}
     {{- end }}

@@ -37,7 +37,7 @@ childhood.
 South.
 From France to Greece, then a plane to Japan, and from there all down to New
 Zealand.
-Between these marker, we'll see day by day.
+Between these markers, we'll see day by day.
 
 ### What will be on this blog ?
 

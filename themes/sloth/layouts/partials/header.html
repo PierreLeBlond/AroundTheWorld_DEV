@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
 
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/earth.css"/>
@@ -18,18 +18,16 @@
 
       <div id="header-wrap" class="script-font switch day">
 
-        <div class="main-title switch day" id="first-title">
+        <div class="main-title switch day funky-link" id="first-title">
           <a href="{{ .Site.BaseURL }}"><h1 class="switch day">Somewhere...</h1></a>
         </div>
 
-        <div class="main-title switch day" id="second-title">
+        <div class="main-title switch day funky-link" id="second-title">
           <a href="{{ .Site.BaseURL }}"><h1 class="switch day" >...on Earth</h1></a>
         </div>
 
         <div id="main-undertitle">
-          <!--<div class="underline"><img alt="" src="{{ $.Site.BaseURL }}/images/deco-left.svg"></div>-->
-          <div id="earth-logo" class="earth" ><img alt="Earth has been destroyed" src="{{ $.Site.BaseURL }}/images/earth.svg"></div>
-          <!--<div class="underline"><img alt="" src="{{ $.Site.BaseURL }}/images/deco-left.svg"></div>-->
+          <div id="earth-logo" class="switch day" ></div>
         </div>
 
         <h1 id="country-name" class="switch day"></h1>
@@ -39,25 +37,27 @@
           <nav id="main-nav" class="switch day">
 
             <ul>
-              <li class="nav-link left-link"> <a href="{{ .Site.BaseURL }}/article/about"> About </a> </li>
-              <li class="nav-link left-link"> <a href="{{ .Site.BaseURL }}/article"> Articles </a> </li>
-              <li class="nav-link right-link"> <a href="{{ .Site.BaseURL }}/gallery"> Gallery </a> </li>
-              <li class="nav-link right-link"> <a href="{{ .Site.BaseURL }}/country"> Country </a> </li>
+              <li class="nav-link left-link switch day"> <a href="{{ .Site.BaseURL }}/article/about"> About </a> </li>
+              <li class="nav-link left-link switch day"> <a href="{{ .Site.BaseURL }}/article"> Articles </a> </li>
+              <li class="nav-link right-link switch day"> <a href="{{ .Site.BaseURL }}/gallery"> Gallery </a> </li>
+              <li class="nav-link right-link switch day"> <a href="{{ .Site.BaseURL }}/country"> Country </a> </li>
             </ul>
 
           </nav>
 
           <nav id="earth-nav" class="switch day">
 
-            <ul id="earth-ul">
-              <li class="nav-link left-link"> <a id="post-link" href="{{ .Site.BaseURL }}"> Posts </a> </li>
-              <li class="nav-link right-link"> <a id="gallery-link" href="{{ .Site.BaseURL }}"> Gallery </a> </li>
+            <ul>
+              <li class="nav-link left-link switch day"> <a id="post-link" href="{{ .Site.BaseURL }}"> Posts </a> </li>
+              <li class="nav-link right-link switch day"> <a id="gallery-link" href="{{ .Site.BaseURL }}"> Gallery </a> </li>
             </ul>
 
           </nav>
 
           <div id="nav-switch">
-            <img alt="" src="{{ $.Site.BaseURL }}/images/switch.svg">
+            <div class="img-wrapper">
+              <img alt="" src="{{ $.Site.BaseURL }}/images/switch.svg">
+            </div>
           </div>
 
         </div>

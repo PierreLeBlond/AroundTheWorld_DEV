@@ -8,12 +8,13 @@ var EARTH = EARTH || {};
  * The earth script
  * @constructor
  *
- * @property {boolean} light                        - If the light is on, i.e.
+ * @property {boolean} day                        - If the day is on, i.e.
  * if the earth isn't rendered.
  *
  */
 EARTH.App = function(){
-    this.light                              = true;
+    this.day                              = true;
+    this.menuCollapsed                    = true;
     this.isReady                            = false;
     this.viewer                             = null;
     this.earth                              = null;
@@ -88,12 +89,10 @@ EARTH.App.prototype.setupApp = function(){
 
     this.lat = parseInt(EARTH.countryPos.countries[id].lat);
     this.lon = parseInt(EARTH.countryPos.countries[id].lon);
-    console.log(this.lat + "/" + this.lon);
     this.focus(this.lat, this.lon);
     this.viewer.pickCountry(EARTH.countryColorMap[id]);
 
     /*var gui = new dat.GUI();
-    console.log(gui.domElement);
     document.getElementsByClassName("ac")[0].style.zIndex = "1000";
     var that = this;
     gui.add(this, 'lat', -90, 90).name('lat').onChange(function(val){
@@ -111,20 +110,12 @@ EARTH.App.prototype.toogleEarth = function(){
         this.isReady = true;
     }
 
-    if(this.light){
+    if(this.day){
         var elements = document.getElementsByClassName("switch");
         for(var i = 0; i < elements.length; i++)
         {
             elements[i].className = elements[i].className.replace("day","night");
         }
-
-        document.getElementById("main").style.display = "none";
-        document.getElementById("title").style.display = "none";
-        document.getElementById("earth-section").style.display = "block";
-        document.getElementById("main-nav").style.display = "none";
-        document.getElementById("earth-nav").style.display = "block";
-
-        document.getElementById("earth-logo").src = "/images/earth_neg.svg";
 
         this.viewer.resize();
         this.viewer.render();
@@ -136,17 +127,30 @@ EARTH.App.prototype.toogleEarth = function(){
             elements[i].className = elements[i].className.replace("night","day");
         }
 
-        document.getElementById("earth-section").style.display = "none";
-        document.getElementById("main").style.display = "block";
-        document.getElementById("title").style.display = "block";
-        document.getElementById("earth-nav").style.display = "none";
-        document.getElementById("main-nav").style.display = "block";
-
-        document.getElementById("earth-logo").src = "/images/earth.svg";
-
         this.viewer.stop();
     }
-    this.light = !this.light;
+    this.day = !this.day;
+}
+
+EARTH.App.prototype.toogleMenu = function(navSwitch){
+    navs = document.getElementsByTagName("nav");
+    if(this.menuCollapsed)
+    {
+        for(var i = 0; i < navs.length; i++)
+        {
+            navs[i].style.right = "0px";
+        }
+        navSwitch.className = "expanded";
+    }
+    else
+    {
+        for(var i = 0; i < navs.length; i++)
+        {
+            navs[i].style.right = "100%";
+        }
+        navSwitch.className = "";
+    }
+    this.menuCollapsed = !this.menuCollapsed;
 }
 
 var app = new EARTH.App();
@@ -156,6 +160,6 @@ domElement.style.width = width;
 var height = "\"" + window.innerHeight + "px\"";
 domElement.style.height = height;
 app.setDomElement(domElement);
-document.getElementById('earth-section').style.display = "none";
 document.getElementById("earth-logo").onclick = function(){app.toogleEarth();};
-console.log(document.getElementsByTagName("section")[0].getAttribute("country"));
+var navSwitch = document.getElementById("nav-switch");
+navSwitch.onclick = function(){app.toogleMenu(navSwitch);};
