@@ -1,0 +1,18 @@
+
+<div class="info">
+  {{- range first 10 .Data.Pages }}
+
+  {{- if eq .Type "info" }}
+  <ul>
+    <li> <h4> Capital </h4> <h3> {{ .Params.capital }} </h3> </li>
+    <li> <h4> Currency  </h4> <h3> {{ .Params.currency }} </h3> </li>
+    <li> <h4> Food  </h4> <h3> {{ .Params.food }} </h3> </li>
+    <li> <h4> Alcohol  </h4> <h3> {{ .Params.alcohol }} </h3> </li>
+    <li> <h4> Beer  </h4> <h3> {{ .Params.beer }} </h3> </li>
+  </ul>
+  {{- end }}
+
+  {{- end }}
+</div>
+
+

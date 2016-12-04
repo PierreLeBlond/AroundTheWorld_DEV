@@ -100,11 +100,18 @@ body {
     margin: auto;
 }
 
+#background {
+    display: none;
+}
+
+
 #container {
+    background-color: #EEEEEE;
     position: relative;
     min-height: 100%; /* to achieve sticky footer */
     padding: 0;
     margin: 0;
+    box-shadow: 0px 0px 10px 10px rgb(238,238,238);
 }
 
 body.night {
@@ -259,6 +266,7 @@ section {
     font-size: 1em;
     padding-top: 7em;
     padding-bottom: 4em;
+    padding-left: 1%;
 }
 
 #main.night {
@@ -267,9 +275,8 @@ section {
 
 #title {
     /*text-align: center;*/
-    color: #777777;
+    color: #222222;
     font-size: 1em;
-    border-bottom: dotted 2px grey;
     margin: 0px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -277,8 +284,69 @@ section {
     display: inline-block;
 }
 
+.single {
+    border-bottom: dotted 2px grey;
+}
+
 #title.night {
     display: none;
+}
+
+.info {
+    width: 98%;
+    margin: auto;
+    margin-top: 1em;
+    border: solid 1px #BBBBBB;
+    box-shadow: 0px 0px 5px 5px #BBBBBB;
+}
+
+#dico {
+    width: 30%;
+    margin-left: 1%;
+    float: left;
+}
+
+.info ul {
+    margin: 0;
+    padding: 0;
+}
+
+.info li {
+    display: inline-block;
+    width: 19%;
+    text-align: center;
+}
+
+#dico li {
+    width: 100%;
+}
+
+.info h4 {
+    display: block;
+    margin: 0;
+    margin-top: 5px;
+    color: #666666;
+    font-size: 0.8em;
+}
+
+#dico h4 {
+    display: inline-block;
+    padding-left: 10%;
+    float: left;
+}
+
+.info h3 {
+    display: block;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+#dico h3 {
+    display: inline-block;
+    padding-right: 10%;
+    float: right;
 }
 
 article {
@@ -292,6 +360,10 @@ article {
 article h4 {
     margin: 0;
     padding-top: 2%;
+}
+
+.date {
+    color: #666666;
 }
 
 article figure {
@@ -312,7 +384,6 @@ article figure img {
     /*margin-top: 12%;
     margin-bottom: 20%;*/
     height: auto;
-    z-index: -1;
 }
 
 article figure figcaption {
@@ -332,13 +403,38 @@ article .post {
     font-family: Josefin Slab;
 }
 
+.quote {
+    width: 100%;
+    height: auto;
+}
+
+.quote p {
+    display: block;
+    width: 50%;
+    padding-left: 50%;
+    color: #222222;
+}
+
+.credit {
+    width: 100%;
+    height: auto;
+}
+
+.credit p {
+    width: 30%;
+    padding-left: 70%;
+    display: block;
+    color: #777777;
+    font-style: italic;
+}
+
 .item-ratio {
     position: relative;
     display: inline-block;
     width: 30%;
     margin-left: 1%;
     margin-right: 1%;
-    margin-top: 2%;
+    margin-top: 1em;
 }
 
 .item-ratio:before {
@@ -456,6 +552,28 @@ footer.night {
     font-size: 0.6em;
 }
 
+@media screen and (min-device-width: 980px) and (min-width: 980px) {
+
+    header.day {
+        width: 70%;
+        left: 15%;
+    }
+
+    #background.day {
+        display: block;
+        background-image: url(/images/background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% auto;
+        text-align: center;
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 @media screen and (max-device-width: 980px), screen and (max-width: 980px) {
     body {
         width: 90%;
@@ -464,8 +582,9 @@ footer.night {
     #header-wrap {
         width: 90%;
     }
+
     .item-title {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 }
 
@@ -579,6 +698,10 @@ footer.night {
         -webkit-transform: rotate(90deg);
     }
 
+    nav.day {
+        box-shadow: 0px 0px 10px 10px rgb(238,238,238);
+    }
+
     nav {
         font-size: 1.6em;
         background-color: #EEEEEE;
@@ -594,6 +717,7 @@ footer.night {
 
     nav.night {
         background-color: #000000;
+        box-shadow: 0px 0px 10px 10px rgb(0,0,0);
     }
 
     nav ul {
@@ -636,12 +760,16 @@ footer.night {
         font-size: 4vw;
     }
 
+    .info li {
+        width: 48%;
+    }
+
     article figure img {
         width: 100%;
     }
 
     article figure figcaption {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 }
 

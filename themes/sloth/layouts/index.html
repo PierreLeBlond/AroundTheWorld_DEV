@@ -6,7 +6,7 @@
 
   <div id="main" class="switch day">
 
-    {{- range first 10 .Data.Pages -}}
+    {{- range .Data.Pages -}}
 
     {{- if eq .Type "post" }}
     {{- .Render "li" }}

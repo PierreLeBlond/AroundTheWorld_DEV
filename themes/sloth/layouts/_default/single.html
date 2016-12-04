@@ -2,14 +2,14 @@
 
 <section country="{{ .Section }}">
 
-  <h1 id="title" class="script-font switch day" >{{ .Title }}</h1>
+  <h1 id="title" class="script-font switch day single" >{{ with .Params.fulltitle }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h1>
 
     <div id="main" class="switch day">
 
       <article>
 
-      <h4>
-        {{ .Date.Format "2006-01-02" }}
+      <h4 class="date">
+        {{ .Date.Format "January 01, 2006" }}
       </h4>
 
         {{ .Content }}
