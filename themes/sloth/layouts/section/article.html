@@ -5,7 +5,7 @@
   <h1 id="title" class="script-font switch day"> Articles </h1>
 
   <div id="main" class="switch day">
-    {{- range first 10 .Data.Pages }}
+    {{- range .Data.Pages }}
     {{ .Render "li" }}
     {{- end }}
   </div>

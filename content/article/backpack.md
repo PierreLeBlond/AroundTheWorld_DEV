@@ -1,7 +1,7 @@
 +++
 date = "2016-09-25T18:48:16+02:00"
 title = "Backpack"
-image = "../article/stuff.jpg"
+image = "backpack.jpg"
 +++
 
 {{< figure src="/images/article/stuff.jpg" title="My stuff" >}}
