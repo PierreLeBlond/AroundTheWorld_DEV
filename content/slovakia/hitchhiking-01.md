@@ -5,6 +5,9 @@ image = "dontpanic.jpeg"
 type = "post"
 +++
 
+<div class="quote"><p>“Any man who can hitch the length and breadth of the galaxy, rough it, slum it, struggle against terrible odds, win through, and still knows where his towel is is clearly a man to be reckoned with.” </p></div>
+<div class="credit"><p> Douglas Adams </p></div>
+
 Bratislava is one hour from Vienna, so it was the perfect time to try
 hitchicking.  
 I thing I've always been afraid of getting stuck somewere in the
