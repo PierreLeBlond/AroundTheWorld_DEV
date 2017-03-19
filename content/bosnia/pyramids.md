@@ -4,6 +4,7 @@ title = "Bosnian's pyramids..."
 fulltitle = "...Or how Ego can ruin beautiful things."
 image = "pyramids.jpg"
 type = "post"
+draft = "true"
 +++
 
 <div class="quote"><p>“Put some terry pratchet quote” </p></div>

@@ -4,6 +4,7 @@ title = "Exarchia"
 fulltitle = "Je lutte donc je suis."
 image = "exarchia.jpg"
 type = "post"
+draft = "true"
 +++
 
 <div class="quote"><p>“The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.” </p></div>
