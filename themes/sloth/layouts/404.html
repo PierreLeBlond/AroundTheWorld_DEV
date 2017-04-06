@@ -1,5 +1,19 @@
 {{ partial "header.html" . }}
 
-Nothing here :/
+<section country="none">
+
+  <h1 id="title" class="script-font switch day"> 404 </h1>
+
+  <div id="main" class="switch day">
+
+    <h3> There is nothing to see here ! </h3>
+
+    <img class="image-404" src="{{ $.Site.BaseURL }}/images/404.jpg" alt="404" />
+
+  </div>
+
+  {{ partial "earth.html" . }}
+
+</section>
 
 {{ partial "footer.html" . }}

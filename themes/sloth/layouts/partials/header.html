@@ -1,8 +1,17 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <script type="text/javascript">
+var host = "www.somewhereonearth.xyz";
+if ((host == window.location.host) && (window.location.protocol != "https:"))
+window.location.protocol = "https";
+    </script>
+
     <meta charset="utf-8">
+    <link rel="canonical" href=" { { .Site.BaseURL } }{ { .Site.url } }" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/earth.css"/>
@@ -40,7 +49,7 @@
               <li class="nav-link left-link switch day"> <a href="{{ .Site.BaseURL }}/article/about"> About </a> </li>
               <li class="nav-link left-link switch day"> <a href="{{ .Site.BaseURL }}/article"> Articles </a> </li>
               <li class="nav-link right-link switch day"> <a href="{{ .Site.BaseURL }}/gallery"> Gallery </a> </li>
-              <li class="nav-link right-link switch day"> <a href="{{ .Site.BaseURL }}/country"> Country </a> </li>
+              <li class="nav-link right-link switch day"> <a href="{{ .Site.BaseURL }}/country"> Countries </a> </li>
             </ul>
 
           </nav>

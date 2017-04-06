@@ -1,32 +1,33 @@
 +++
 date = "2017-03-05"
 title = "Hanoï"
-image = "dontpanic.jpeg"
+image = "hanoi.jpg"
 type = "post"
-draft = "true"
+draft = "false"
 +++
 
-I had to check the stamps on my passport to realize that I spend two months in
+I had to check the stamps on my passport to realize that I spend almost two months in
 Taiwan. Didn't thought it was that long.  
-Even if I did so many differents and new things, I didn't took the time to
-write about it, or didn't wanted to in fact.  
-I've just arrived in Vietnam, so I'll try to start writting more !  
+Don't have the time to write about Taiwan, but if you have the chance to go
+there, it's kinda unique, you won't be disappointed.
 
-My plan landed in Hanoi, the capital City. I missed the last bus to the down
-town by a couple of minutes, so I was forced to use a cab, which cost me as
-much as three nights in the hostel I'm staying in.  
+I've just arrived in Vietnam, so let me tell you a few thing about this one.  
 
-This hostel is anyway the cheapest I could find, it has pros and cons.
+So yeah, here you are, landing in Hanoi, the capital City. If you see, like I
+did, the only bus going to town at that time passing right in front of you when
+you've just left the terminal, you'd be forced to use a cab, which will cost you as
+much as three nights in the hostel you're planning to stay in.  
+
+This hostel is anyway the cheapest you could find, with its pros and cons.
 The beds are pretty much made of rocks, which is good for your back though.
 As in a few places I've been so far in Asia, the shower is just a shower head
 hanging on the wall of the bathroom. So it gets flooded in no time and even
-brushing your teeth means having your feet wet.  
-I think I like this kind of places, when it just comes to your mind that some comfort
-isn't mandatory after all.  
-And for the pros, well for four Euros, you get a free breakfast, and free beer
+brushing your teeth means getting your feet wet.  
+Keep it up ! It will remind you that some comfort isn't mandatory after all.  
+And for the pros, well for four Euros, you get a free breakfast, and free beers
 at night if you get the timing right.  
-Which lead me to night life in the old town of Hanoi. A fellow backpacker told
-me that a few years earlier the old town was were Vietnamese people would enjoy
+Which lead me to night life in the old town of Hanoi. A fellow backpacker would
+tell you that a few years earlier the old town was where Vietnamese people would enjoy
 foods and drinks, with what you can expect from the "old" in old town.  
 Now it's full of party hostel, occidental style bar and night clubs, and almost
 all the costumers are either European or American.  
@@ -35,10 +36,21 @@ aren't asking if you want some beautiful girls for the night, drugs or scooter
 rental.  
 So yeah, if you want to party with other backpackers, perfect place to be,
 especially when there is no entrance fee, and the first drink is most of time
-free, which mean you can spend the all night without spending any Dongs.
+free, which mean you can spend the whole night without spending any Dongs.
 Everything is cheap anyway.  
-But there is almost no exchange and communication between Vietnamese and travelers, which I think we
+But there is almost no exchange and communication between locals and travelers, which we
 should call Tourist - I mean, I do feel like a real tourist in Hanoi - Where in
 Taiwan strangers would mixed nicely with local people.  
+But wait, don't feel like living the city too soon, for when it comes to food,
+it gets better. You see these small plastic chairs on the pavement ? Come, have
+a seat, and in no time someone will bring you tasty Vietnamese meal, enough to
+fill your stomach for less than a dollar.  
+Now the street is finished in a outdoor restaurant, where you choose your meal
+by choosing where to seat.  
+Enjoy your rice noodle, while listening to the horn symphony for motorbikes
+and buses, and then we'll be ready to leave the noisy city and explore the
+country side.  
+There, will less effort, you might be able to know more about local culture and
+way of live.
 
-
+{{< figure src="/images/article/intothewild.jpg" title="Leaving the city, to more quiet places." >}}
