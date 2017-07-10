@@ -1,26 +1,29 @@
 var EARTH = EARTH || {};
 
-EARTH.currentCountry = "cambodia";
+EARTH.currentCountry = "albania";
 
 EARTH.countryAvailable = {
-97: 3,
-150: 3,
-48: 6,
-35: 3,
-67: 6,
-133: 6,
-120: 3,
-111: 3,
-94: 3,
-54: 3,
-112: 3,
-69: 3,
-140: 3,
-37: 3,
-40: 3,
-19: 3,
-91: 6,
-123: 6
+    97: 3,
+    150: 3,
+    48: 6,
+    35: 3,
+    67: 6,
+    133: 6,
+    120: 3,
+    111: 3,
+    94: 3,
+    54: 3,
+    112: 3,
+    69: 3,
+    140: 3,
+    37: 3,
+    40: 3,
+    19: 3,
+    91: 6,
+    123: 6,
+    50: 3,
+    107: 3,
+    228: 3
 };
 
 EARTH.country = {
@@ -42,7 +45,10 @@ EARTH.country = {
     japan: "JP",
     taiwan: "TW",
     vietnam: "VN",
-    cambodia: "KH"
+    cambodia: "KH",
+    thailand: "TH",
+    malaysia: "MY",
+    singapore: "SG"
 }
 
 EARTH.countryName = {
